@@ -16,7 +16,6 @@ def setup_environment():
     ffmpeg_path = imageio_ffmpeg.get_ffmpeg_exe()
     mpl.rcParams['animation.ffmpeg_path'] = ffmpeg_path
 
-
     # --- Setup logging before initializing Hydra ---
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     log_filename = f"experiments/logs/notebook_run_{timestamp}.log"
@@ -30,7 +29,6 @@ def setup_environment():
 
 def main():
     setup_environment()
-                                                                                                 
     # --- Define your run list here --- #
     run_list = [
                 # [0.0, "none", "none", "shear_flow", "shear_flow_Reynolds_5e4_Schmidt_5e-1(double-v)"],
@@ -59,7 +57,6 @@ def main():
 
     ## --- Model Loop --- ##
     for i, isign, itype, dset, fname in run_list: 
-            
         # --- Experiment Setup --- #
         injection_strength = i
         inject_sign = isign  #     <<--------### ['pos' | 'neg' ] 
@@ -103,7 +100,6 @@ def main():
                                    f"+inject_strength={injection_strength}",
                                    f"+inject_tensor_path='experiments/activations/newTensor:(18vortex_group)-(10laminar_group).pickle'"]) 
 
-
         # --- Distribution --- #
         world_size = int(os.environ.get("WORLD_SIZE", 1))
         rank = int(os.environ.get("RANK", 0))
@@ -121,7 +117,6 @@ def main():
                                                     local_rank=local_rank,
                                                     rank=rank,
                                                     device_mesh=device_mesh)
-
 
 if __name__ == "__main__":
     main()
