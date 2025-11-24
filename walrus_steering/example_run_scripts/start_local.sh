@@ -11,7 +11,7 @@ export OMP_NUM_THREADS=${SLURM_CPUS_ON_NODE}
 export HDF5_USE_FILE_LOCKING=FALSE
 export HYDRA_FULL_ERROR=1
 
-source /mnt/home/rfear/coding/projects/walrus/temporary_mppx_name/venv/bin/activate
+source /path/to/venv/bin/activate
 
 srun --pty python -m torch.distributed.run --nnodes=$SLURM_JOB_NUM_NODES \
 									 --nproc_per_node=$SLURM_GPUS_PER_NODE \

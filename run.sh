@@ -1,6 +1,6 @@
 #!/bin/bash
-cd temporary_mppx_name/
-source /mnt/home/rfear/coding/projects/walrus/temporary_mppx_name/venv/bin/activate
+cd walrus_steering/
+source /path/to/your/venv/bin/activate
 
 export OMP_NUM_THREADS=24
 export HDF5_USE_FILE_LOCKING=FALSE

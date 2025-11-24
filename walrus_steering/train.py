@@ -34,7 +34,7 @@ from walrus_steering.utils.distribution_utils import (
 )
 from walrus_steering.utils.experiment_utils import configure_experiment
 
-logger = logging.getLogger("temporary_mppx_name")
+logger = logging.getLogger("walrus_steering")
 # logger.setLevel(level=logging.DEBUG)
 
 # Retrieve configuration for hydra
@@ -228,7 +228,7 @@ def start_training(
                         inject_tensor = inject_tensor[tuple(slices)]
 
                         if not cropping_warning_emitted:
-                            logger.warning(f"Center-cropped injection tensor (mode '{cfg.inject_spatial_interpolation}'). "
+                            logger.warning(f"Center-cropped injection tensor (mode '{cfg.inject_spatial_type}'). "
                                            f"Cropped dims: {cropped_dims}")
                             cropping_warning_emitted = True
 
@@ -237,7 +237,7 @@ def start_training(
                         expanded_injection = inject_tensor
 
                     # Option A: spatial interpolation, then expansion
-                    elif cfg.inject_spatial_interpolation == 'interpol':
+                    elif cfg.inject_spatial_type == 'interpol':
                         inject_tensor = inject_tensor.squeeze(0)
                         inject_tensor = F.interpolate(inject_tensor,
                                                     size=(output_shape[3],
@@ -251,7 +251,7 @@ def start_training(
                                                                 -1, -1, -1, -1)
 
                     # Option B: padding after expanding batch & channel    
-                    elif cfg.inject_spatial_interpolation == 'pad':
+                    elif cfg.inject_spatial_type == 'pad':
                         expanded_injection = inject_tensor.expand(output_shape[0],
                                                                     output_shape[1],
                                                                     -1, -1, -1, -1)
@@ -267,7 +267,7 @@ def start_training(
                         expanded_injection = F.pad(expanded_injection, padding, mode='constant', value=0)
 
                     # Option C: drop spatial dims, avg out spatial variation in other dims
-                    elif cfg.inject_spatial_interpolation == 'drop':
+                    elif cfg.inject_spatial_type == 'drop':
                         inject_tensor = inject_tensor.mean(dim=(3, 4, 5), keepdim=True)
                         expanded_injection = inject_tensor.expand(output_shape[0], 
                                                                 output_shape[1], 
@@ -277,7 +277,7 @@ def start_training(
                                                                 output_shape[5])                        
 
                     # Option D: no padding, expansion or dropping of spatial dims  
-                    elif cfg.inject_spatial_interpolation == 'none':
+                    elif cfg.inject_spatial_type == 'none':
                         expanded_injection = inject_tensor
 
                     # Initial normalisation
@@ -348,8 +348,8 @@ def start_training(
         trainer.train()
 
     if rank == 0 and cfg.save_activations: 
-        activations_dir = "/mnt/home/rfear/coding/projects/walrus/temporary_mppx_name/experiments/activations"
-        activations_path = os.path.join(activations_dir, f"{cfg.save_activations}.pickle")
+        activations_dir = pathlib.Path(__file__).parent.parent.parent / "experiments" / "activations"
+        activations_path = activations_dir / f"{cfg.save_activations}.pickle"
         
         with open(activations_path, 'wb') as f:
             pickle.dump(activations, f)
