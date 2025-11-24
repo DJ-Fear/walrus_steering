@@ -68,13 +68,12 @@ def main():
                         overrides=[f"name=\"{run_name}\"",
                                     "hydra.run.dir=experiments",
                                     "distribution=local",
-                                    "server=rusty",
                                     "logger.wandb=False",
                                     "checkpoint.checkpoint_frequency=0",
                                     "checkpoint.save_best=False",
                                    f"checkpoint.save_dir='experiments/checkpointing/{run_name}/'",
-                                    "+checkpoint.load_checkpoint_path='/path/to/your/checkpoint/'", 
-                                    "data.well_base_path='/path/to/the_well/datasets/'",
+                                    "+checkpoint.load_checkpoint_path='path/to/your/checkpoint/'", 
+                                    "data.well_base_path='path/to/the_well/datasets/'",
                                     "data=2d_steering_subset",
                                    f"+data.module_parameters.well_dataset_info.{dset}.include_filters=['{fname}.hdf5']",
                                 	"data.module_parameters.batch_size=2",  
@@ -92,7 +91,7 @@ def main():
                                    f"+inject_spatial_type={inject_type}",
                                    f"+inject_sign={inject_sign}",
                                    f"+inject_strength={injection_strength}",
-                                   f"+inject_tensor_path='experiments/activations/newTensor:(18vortex_group)-(10laminar_group).pickle'"]) 
+                                    "+inject_tensor_path='experiments/activations/newTensor:(18vortex_group)-(10laminar_group)[+].pickle'"]) 
 
         # --- Distribution --- #
         world_size = int(os.environ.get("WORLD_SIZE", 1))

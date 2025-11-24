@@ -1,6 +1,6 @@
 #!/bin/bash
 cd walrus_steering/
-source /path/to/your/venv/bin/activate
+source path/to/your/venv/bin/activate
 
 export OMP_NUM_THREADS=24
 export HDF5_USE_FILE_LOCKING=FALSE

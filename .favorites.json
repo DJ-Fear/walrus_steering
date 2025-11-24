@@ -1,18 +1,42 @@
 [
     {
         "type": "File",
-        "name": "/mnt/home/rfear/coding/projects/walrus_steering/walrus_steering/README.md",
+        "name": "/mnt/home/rfear/coding/projects/walrus_steering/start.py",
         "parent_id": null,
         "workspaceRoot": "/mnt/home/rfear/coding/projects/walrus_steering",
-        "workspacePath": "walrus_steering/README.md",
-        "id": "mDX9nvyHeAs0GYFc"
+        "workspacePath": "start.py",
+        "id": "IrTeBdWjlM0wxAPU"
     },
     {
         "type": "File",
-        "name": "/mnt/home/rfear/coding/projects/walrus_steering/walrus_steering/start.py",
+        "name": "/mnt/home/rfear/coding/projects/walrus_steering/run.sh",
         "parent_id": null,
         "workspaceRoot": "/mnt/home/rfear/coding/projects/walrus_steering",
-        "workspacePath": "walrus_steering/start.py",
-        "id": "v5WmsdJR248kPhqD"
+        "workspacePath": "run.sh",
+        "id": "P0WtngxoFiHqas3M"
+    },
+    {
+        "type": "File",
+        "name": "/mnt/home/rfear/coding/projects/walrus_steering/README.md",
+        "parent_id": null,
+        "workspaceRoot": "/mnt/home/rfear/coding/projects/walrus_steering",
+        "workspacePath": "README.md",
+        "id": "ca9ZCdmMWi1F8qlE"
+    },
+    {
+        "type": "Directory",
+        "name": "/mnt/home/rfear/coding/projects/walrus_steering/walrus_steering/configs",
+        "parent_id": null,
+        "workspaceRoot": "/mnt/home/rfear/coding/projects/walrus_steering",
+        "workspacePath": "walrus_steering/configs",
+        "id": "gf8KuYikaC7pQeXG"
+    },
+    {
+        "type": "File",
+        "name": "/mnt/home/rfear/coding/projects/walrus_steering/steering_utils/tensor_creator.py",
+        "parent_id": null,
+        "workspaceRoot": "/mnt/home/rfear/coding/projects/walrus_steering",
+        "workspacePath": "steering_utils/tensor_creator.py",
+        "id": "k4vmlXoWUwDtpIYf"
     }
 ]
