@@ -42,6 +42,12 @@ Within you will find tools firstly for generating "delta" concept vectors (activ
    "+checkpoint.load_checkpoint_path='path/to/your/checkpoint/'"
    ```
 
+4. **Point to The Well Datasets Folder**
+   
+   Modify The Well dataset path in `start.py`:
+   ```python
+   "data.well_base_path='path/to/the_well/datasets'"
+
 ## Workflow Overview
 
 The steering workflow consists of three main stages:
