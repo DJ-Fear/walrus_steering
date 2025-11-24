@@ -166,47 +166,44 @@ We have provided a concept vector to get you started. This is called `newTensor:
 
 To illustrate the variety of steering results which can be achieved with different concept vectors, target datafiles, and steering settings we include 6 examples below.
 
-#### 1. Dropped Spatial Dimensions ($\alpha=–0.5$)
-**Datafile:** `shear_flow_Reynolds_1e5_Schmidt_2e-1`
-**Concept:** `(18vortex_group)-(10laminar_group)`
+#### Dropped Spatial Dimensions ($\alpha=–0.5$)
+**Datafile:** `shear_flow_Reynolds_1e5_Schmidt_2e-1`  
+**Concept:** `(18vortex_group)-(10laminar_group)`  
 **Injection Type:** Drop | **Sign:** Negative | **Strength:** 0.5
 
 [![Negative Drop Example](assets/shear_flow_Reynolds_1e5_Schmidt_2e-1[–drop@0.5][(18vortex_group)-(10laminar_group)].png)](assets/shear_flow_Reynolds_1e5_Schmidt_2e-1[–drop@0.5][(18vortex_group)-(10laminar_group)].png)
 
-#### 2. Padded Spatial Dimensions ($\alpha=–0.4$)
-**Datafile:** `shear_flow_Reynolds_1e5_Schmidt_2e-1`
-**Concept:** `(18vortex_group)-(10laminar_group)`
+#### Padded Spatial Dimensions ($\alpha=–0.4$)
+**Datafile:** `shear_flow_Reynolds_1e5_Schmidt_2e-1`  
+**Concept:** `(18vortex_group)-(10laminar_group)`  
 **Injection Type:** Pad | **Sign:** Negative | **Strength:** 0.4
 
 [![Negative Pad Example](assets/shear_flow_Reynolds_1e5_Schmidt_2e-1[–pad@0.4][(18vortex_group)-(10laminar_group)].png)](assets/shear_flow_Reynolds_1e5_Schmidt_2e-1[–pad@0.4][(18vortex_group)-(10laminar_group)].png)
 
-#### 3. Dropped Spatial Dimensions  ($\alpha=+0.7$)
-**Datafile:** `shear_flow_Reynolds_1e5_Schmidt_2e-1`
-**Concept:** `(18vortex_group)-(10laminar_group)`
+#### Dropped Spatial Dimensions  ($\alpha=+0.7$)
+**Datafile:** `shear_flow_Reynolds_1e5_Schmidt_2e-1`  
+**Concept:** `(18vortex_group)-(10laminar_group)`  
 **Injection Type:** Drop | **Sign:** Positive | **Strength:** 0.7
 
 [![Positive Drop Example](assets/shear_flow_Reynolds_1e5_Schmidt_2e-1[+drop@0.7][(18vortex_group)-(10laminar_group)].png)](assets/shear_flow_Reynolds_1e5_Schmidt_2e-1[+drop@0.7][(18vortex_group)-(10laminar_group)].png)
 
-#### 4. Padded Spatial Dimensions ($\alpha=+0.5$)
-**Datafile:** `shear_flow_Reynolds_1e5_Schmidt_2e-1`
-**Concept:** `(18vortex_group)-(10laminar_group)`
+#### Padded Spatial Dimensions ($\alpha=+0.5$)
+**Datafile:** `shear_flow_Reynolds_1e5_Schmidt_2e-1`  
+**Concept:** `(18vortex_group)-(10laminar_group)`  
 **Injection Type:** Pad | **Sign:** Positive | **Strength:** 0.5
 
 [![Positive Pad Example](assets/shear_flow_Reynolds_1e5_Schmidt_2e-1[+pad@0.5][(18vortex_group)-(10laminar_group)].png)](assets/shear_flow_Reynolds_1e5_Schmidt_2e-1[+pad@0.5][(18vortex_group)-(10laminar_group)].png)
 
-#### 5. Dropped Spatial Dimensions ($\alpha=+0.6$)
-**Datafile:** `shear_flow_Reynolds_1e5_Schmidt_2e-1`
-**Concept:** `(2vortex_group)-(2laminar_group)`
+#### Dropped Spatial Dimensions ($\alpha=+0.6$)
+**Datafile:** `shear_flow_Reynolds_1e5_Schmidt_2e-1`  
+**Concept:** `(2vortex_group)-(2laminar_group)`  
 **Injection Type:** Drop | **Sign:** Positive | **Strength:** 0.6
 
 [![Positive Drop Example](assets/shear_flow_Reynolds_1e5_Schmidt_2e-1[+drop@0.6][(2vortex_group)-(2laminar_group)].png)](assets/shear_flow_Reynolds_1e5_Schmidt_2e-1[+drop@0.6][(2vortex_group)-(2laminar_group)].png)
 
-#### 6. Padded Spatial Dimensions ($\alpha=+0.4$)
-**Datafile:** `shear_flow_Reynolds_1e5_Schmidt_5e0`
-**Concept:** `(1vortex_group)-(1laminar_group)`
+#### Padded Spatial Dimensions ($\alpha=+0.4$)
+**Datafile:** `shear_flow_Reynolds_1e5_Schmidt_5e0`  
+**Concept:** `(1vortex_group)-(1laminar_group)`  
 **Injection Type:** Pad | **Sign:** Positive | **Strength:** 0.4
 
 [![Positive Pad Example](assets/shear_flow_Reynolds_1e5_Schmidt_5e0[+pad@0.4][(1vortex_group)-(1laminar_group)].png)](assets/shear_flow_Reynolds_1e5_Schmidt_5e0[+pad@0.4][(1vortex_group)-(1laminar_group)].png)
-
-
-
