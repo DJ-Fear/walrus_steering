@@ -146,8 +146,8 @@ If you are using a SLURM cluster, you may wish to use the provided run script.
 
 ### Files Required:
 *   Checkpoints:
-    * `miles_rio_checkpoint_last/` (new)
-    * `.../` (old)
+    * `[TODO].../` (new)
+    * `[TODO].../` (old)
 *   Steering Tensor: [`experiments/activations/newTensor:(18vortex_group)-(10laminar_group)[+].pickle`]
 *   Dataset: The Well's `shear_flow` dataset.
 
