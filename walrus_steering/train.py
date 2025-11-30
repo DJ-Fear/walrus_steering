@@ -47,7 +47,7 @@ logger.info(f"Run training script for {CONFIG_PATH}")
 # import warnings
 # warnings.filterwarnings("ignore")
 
-def start_training(
+def run_model(
     cfg: DictConfig,
     experiment_name: str,
     experiment_folder: str,
@@ -396,15 +396,15 @@ def main(cfg: DictConfig):
             config=config_for_wandb,
             name=experiment_name)
 
-    start_training(cfg,
-                   experiment_name,
-                   experiment_folder,
-                   viz_folder,
-                   is_distributed,
-                   world_size,
-                   rank,
-                   local_rank,
-                   device_mesh=device_mesh,)
+    run_model(cfg,
+              experiment_name,
+              experiment_folder,
+              viz_folder,
+              is_distributed,
+              world_size,
+              rank,
+              local_rank,
+              device_mesh=device_mesh,)
     
     if rank == 0 and cfg.logger.wandb:
         wandb.finish()

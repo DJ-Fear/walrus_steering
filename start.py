@@ -7,7 +7,7 @@ import matplotlib as mpl
 from datetime import datetime
 from hydra import compose, initialize 
 import matplotlib.animation as manimation 
-from walrus_steering.train import start_training 
+from walrus_steering.train import run_model 
 from walrus_steering.utils.distribution_utils import configure_distribution
 from walrus_steering.utils.experiment_utils import configure_experiment
 
@@ -100,16 +100,16 @@ def main():
         is_distributed = (cfg.distribution.distribution_type.upper() != "LOCAL" and world_size > 1)
         device_mesh = configure_distribution(cfg)
 
-        # --- Train --- #
-        start_training(cfg=cfg,
-                       experiment_name=experiment_name,
-                       experiment_folder=experiment_folder,
-                       viz_folder=viz_folder,
-                       is_distributed=is_distributed,
-                       world_size=world_size,
-                       local_rank=local_rank,
-                       rank=rank,
-                       device_mesh=device_mesh)
+        # --- Model --- #
+        run_model(cfg=cfg,
+                  experiment_name=experiment_name,
+                  experiment_folder=experiment_folder,
+                  viz_folder=viz_folder,
+                  is_distributed=is_distributed,
+                  world_size=world_size,
+                  local_rank=local_rank,
+                  rank=rank,
+                  device_mesh=device_mesh)
 
 if __name__ == "__main__":
     main()
