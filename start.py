@@ -68,6 +68,7 @@ def main():
                         overrides=[f"name=\"{run_name}\"",
                                     "hydra.run.dir=experiments",
                                     "distribution=local",
+                                    "server=local",
                                     "logger.wandb=False",
                                     "checkpoint.checkpoint_frequency=0",
                                     "checkpoint.save_best=False",
