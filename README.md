@@ -145,7 +145,7 @@ If you are using a SLURM cluster, you may wish to use the provided run script.
 ```
 
 ### Files Required:
-*   **Checkpoint** » Latest checkpoint is [here](https://huggingface.co/polymathic-ai/walrus).
+*   **Checkpoint** » checkpoint used for paper results is [here](https://huggingface.co/DJ-Fear/walrus_steering).
 *   **Steering Tensor** » `experiments/activations/newTensor:(18vortex_group)-(10laminar_group)[+].pickle`
 *   **Dataset** » The Well's `shear_flow` dataset which can be found [here](https://github.com/PolymathicAI/the_well/).
 
